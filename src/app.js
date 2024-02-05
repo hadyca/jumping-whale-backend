@@ -4,6 +4,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import start from "./start";
+import binance from "./binance";
 const app = express();
 
 const handleHome = (req, res) => res.send("시작합니다~");
@@ -15,8 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(morgan("dev"));
-app.get("/", handleHome);
-app.use(start);
+app.get("/", binance);
+// app.use(binance);
 
 // app.get("/profile", handleProfile);
 
