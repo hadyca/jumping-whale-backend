@@ -11,7 +11,6 @@ export default async function limitSell(coinName, sellVolume, targetBuyPrice) {
     price: targetBuyPrice,
     type: SELL,
   };
-  console.log(req_query);
   const options = {
     method: "POST",
     headers: bithumbHeader(req_query),
